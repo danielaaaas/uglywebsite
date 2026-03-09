@@ -3,16 +3,40 @@ body {
   font-family: 'Comic Sans MS';
   background-image: url("https://media1.tenor.com/m/F7Cd9OI_XRQAAAAC/kid-meme.gif");
   background-size: 100px;
-  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
 
 h2 {
  color: powderblue;
   font-family: 'Comic Sans MS';
-  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
 
-.section{
+.flyer-header {
+  background-color: floralwhite;
+  border: 4px double #CB0FFF;
+  border-radius: 0;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.flyer-header h2 {
+  font-size: 32px;
+  color: #CB0FFF;
+  text-shadow: 2px 2px #ffb3d9;
+  margin: 0;
+}
+
+.flyer-subheader {
+  background-color: #CB0FFF;
+  color: floralwhite;
+  font-family: 'Comic Sans MS';
+  font-size: 13px;
+  text-align: center;
+  padding: 4px;
+  letter-spacing: 2px;
+}
+
+.section {
   border-width: 1px;
   border-style: groove;
   border-color: #CB0FFF;
@@ -21,51 +45,84 @@ h2 {
   padding: 10px;
   border-top: 2px dashed #ff69b4;
   border-bottom: 2px dashed #ff69b4;
-  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
 
-.section:hover {
-  background-color:blueviolet;
+.flyer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background-color: floralwhite;
+  border: 4px double #CB0FFF;
+  padding: 8px;
 }
 
-.columns{
-  columns: 100xp, 3;
+.produce-card {
+  background-color: white;
+  border: 2px solid #CB0FFF;
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  font-family: 'Comic Sans MS';
 }
 
-.loading-bar-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 4px;
+.produce-card:nth-child(even) {
+  background-color: #fff0f8;
+}
+
+.produce-card img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.produce-card .item-name {
+  font-size: 13px;
+  font-weight: bold;
+  color:black;
+  margin: 4px 0 2px 0;
+}
+
+.produce-card .item-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #CB0FFF;
+}
+
+.produce-card .item-unit {
+  font-size: 10px;
+  color: black;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #CB0FFF;
+  color: floralwhite;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px 5px;
+  font-family: 'Comic Sans MS';
+}
+
+.coupon-strip {
+  background-color: #fffacd;
+  border: 2px dashed #CB0FFF;
+  padding: 8px;
+  text-align: center;
   font-family: 'Comic Sans MS';
   font-size: 12px;
+  color: #CB0FFF;
+  margin-top: 4px;
+  position: relative;
 }
 
-.loading-bar-container p {
-  margin: 0 0 4px 0;
-  color:powderblue;
-}
-
-.loading-bar {
-  width: 100%;
-  height: 16px;
-  background-color: white;
-  border: 2px inset floralwhite;
-}
-
-.loading-fill {
-  height: 100%;
-  width: 0%;
-  background-color: powderblue;
-  animation: load 8s ease-in-out infinite;
-}
-
-@keyframes load {
-  0%   { width: 0%; }
-  70%  { width: 85%; }
-  90%  { width: 85%; } 
-  100% { width: 0%; }
+.coupon-strip::before {
+  content: "✂️ - - - - - - - - - - - - - - - - - - - - - - - - - ✂️";
+  display: block;
+  font-size: 10px;
+  color: #CB0FFF;
+  margin-bottom: 12px;
 }
 
 marquee {
@@ -101,37 +158,4 @@ marquee {
 .image-wrap {
   position: relative;
   display: inline-block;
-}
-
-.burst {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  background-color:floralwhite;
-  color: #ffb3d9;
-  font-family: 'Comic Sans MS', sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 100%,
-    25% 100%,
-    0% 75%
-  );
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.2s, transform 0.2s;
-  transform: rotate(-15deg);
-}
-
-.image-wrap:hover .burst {
-  opacity: 1;
-  transform: rotate(-15deg) scale(1.1);
 }
