@@ -28,6 +28,7 @@ h2 {
 
 .flyer-subheader {
   background-color: #CB0FFF;
+  -webkit-print-color-adjust: exact; /* forces background color in webkit browsers */
   color: floralwhite;
   font-family: 'Comic Sans MS';
   font-size: 13px;
@@ -49,7 +50,9 @@ h2 {
 
 .flyer-grid {
   display: grid;
+   display: -webkit-grid; /* safari fallback */
   grid-template-columns: repeat(3, 1fr);
+   -webkit-grid-template-columns: repeat(3, 1fr); /* safari fallback */
   gap: 4px;
   background-color: floralwhite;
   border: 4px double #CB0FFF;
