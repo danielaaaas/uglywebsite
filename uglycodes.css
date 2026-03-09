@@ -1,0 +1,44 @@
+body {
+  color: #CB0FFF;
+  font-family: 'Papyrus';
+  background-image: url("https://media1.tenor.com/m/F7Cd9OI_XRQAAAAC/kid-meme.gif");
+  background-size: 100px;
+  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
+}
+
+h1 {
+  color: powderblue;
+  font-family: 'Papyrus';
+  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
+}
+
+h2 {
+ color: powderblue;
+  font-family: 'Papyrus';
+  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
+}
+
+h3 {
+  color: powderblue;
+  font-family: 'Papyrus';
+  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
+}
+
+.section{
+  border-width: 1px;
+  border-style: dashed;
+  border-color: #CB0FFF;
+  border-radius: 12px;
+  background-color: floralwhite;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
+}
+
+.section:hover {
+  background-color:blueviolet;
+}
+
+.columns{
+  columns: 100xp, 3;
+}
