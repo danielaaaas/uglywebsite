@@ -6,20 +6,8 @@ body {
   cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
 
-h1 {
-  color: powderblue;
-  font-family: 'Comic Sans MS';
-  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
-}
-
 h2 {
  color: powderblue;
-  font-family: 'Comic Sans MS';
-  cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
-}
-
-h3 {
-  color: powderblue;
   font-family: 'Comic Sans MS';
   cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
@@ -31,7 +19,8 @@ h3 {
   border-radius: 12px;
   background-color: floralwhite;
   padding: 10px;
-  margin-bottom: 20px;
+  border-top: 2px dashed #ff69b4;
+  border-bottom: 2px dashed #ff69b4;
   cursor: url("https://cdn.custom-cursor.com/db/19894/color-pixels-wand-cursor.png"), auto;
 }
 
@@ -48,7 +37,6 @@ h3 {
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 2px solid #CB0FFF;
   padding: 4px;
   font-family: 'Comic Sans MS';
   font-size: 12px;
@@ -78,4 +66,72 @@ h3 {
   70%  { width: 85%; }
   90%  { width: 85%; } 
   100% { width: 0%; }
+}
+
+marquee {
+  background-color: #ffb3d9;
+  color: #7b2d8b;
+  font-family: 'Comic Sans MS';
+  font-size: 14px;
+  padding: 6px;
+  border-top: 2px dashed #ff69b4;
+  border-bottom: 2px dashed #ff69b4;
+}
+
+.blink {
+  animation: blink 1s step-start infinite;
+  color: #ff69b4;
+  font-size: 13px;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.counter {
+  font-family: 'Comic Sans MS';
+  font-size: 13px;
+  background-color: #ffe4f0;
+  border: 2px inset #ff69b4;
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 8px 0;
+  color: #7b2d8b;
+}
+
+.image-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.burst {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color:floralwhite;
+  color: #ffb3d9;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    25% 100%,
+    0% 75%
+  );
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  transform: rotate(-15deg);
+}
+
+.image-wrap:hover .burst {
+  opacity: 1;
+  transform: rotate(-15deg) scale(1.1);
 }
